@@ -42,3 +42,19 @@ function ajouterDansHistorique(a,b,op,res){
 	nouvel_li.innerHTML=calcul;//ajoute texte entre <li> et </li>
 	ulHisto.appendChild(nouvel_li);//ajoute <li> dans <ul>
 }
+
+function montrerOuCacherHistorique(){
+	var ulHisto = document.getElementById("ulHistorique");
+	//solution 1:
+	/*
+	var etatDisplay = ulHisto.style.display;
+	console.log("etatDisplay="+etatDisplay);
+	if(etatDisplay!="block")
+		ulHisto.style.display="block";
+	else
+	   ulHisto.style.display="none";
+   */
+   //solution 2:
+   var coche = document.getElementById("cbHisto").checked;
+   ulHisto.style.display=coche?"block":"none";
+}
