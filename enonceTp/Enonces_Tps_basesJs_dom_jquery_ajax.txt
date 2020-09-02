@@ -96,6 +96,18 @@ Contenu :
    jquery
    
 10. Tp "mini CRUD" et appel ajax (.json) avec jquery
+  nouveaux fichiers: produits.html et produits.js
+  dans produits.html
+  un bouton poussoir servira avec effectuer une requete ajax
+  en mode GET vers :
+     - un fichier data/products.json
+	 - ou bien vers un servlet java retournant les memes données
+  Les données récupérées devront être affichées dans un tableau html
+  ou bien d'une autre façon jugée appropriée
+  
+  Dans une seconde phase du Tp on ajoutera une liste déroulante
+  avec certaines catégories de produits et on récupérera si possible
+  les produits de la catégorie choisie .
 
 
    
