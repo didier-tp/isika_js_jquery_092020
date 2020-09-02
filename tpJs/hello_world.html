@@ -1,14 +1,23 @@
 <html>
 <head>
 	<title>hello_world</title>
-	<script src="hello.js"></script>
+	<script src="js/hello.js"></script>
 </head>
 <body onload="affInSpanMsg('hello world')">
 debut page <br/>
-	<script>
-		console.log("ok");
+	<script>	
+	    var v1="abc";
+		v1=12;
+		var v2="12"
+		if(v1==v2)
+		   console.log("memes valeurs");
+		if(v1===v2)
+		   console.log("memes valeurs et memes types");
+		  else
+		    console.log("valeurs ou types differents");
+		console.log(typeof v1);
 	</script>
 <h1><span id="spanMsg"></span></h1>
-suite et fin
+suite et fin 
 </body>
 </html>
