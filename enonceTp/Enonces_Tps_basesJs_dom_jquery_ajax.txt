@@ -101,13 +101,21 @@ Contenu :
   un bouton poussoir servira avec effectuer une requete ajax
   en mode GET vers :
      - un fichier data/products.json
-	 - ou bien vers un servlet java retournant les memes données
+	 - ou bien vers un serveur nodeJs ou un servlet java retournant les memes données
   Les données récupérées devront être affichées dans un tableau html
   ou bien d'une autre façon jugée appropriée
   
   Dans une seconde phase du Tp on ajoutera une liste déroulante
   avec certaines catégories de produits et on récupérera si possible
   les produits de la catégorie choisie .
+  
+  Pour lancer le serveur nodeJs:
+  1) installer si besoin nodeJs
+  2) cd isika_js_jquery_092020\exemples\myNodeServer
+  3) dans "cmd" lancer "npm install"
+  4) lancer lancer_node.bat
+  5) vérifier avec http://localhost:8282 dans un navigateur
+  
 
 
    
