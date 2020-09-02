@@ -10,7 +10,7 @@ function calculerOperation(pOperation){
 		  var inputA =  document.getElementById("inputA");
 		  var a =  inputA.value;
 		  console.log("a="+a);
-		  var inputA =  document.getElementById("inputB");
+		  var inputB =  document.getElementById("inputB");
 		  var b =   inputB.value;
 		  console.log("b="+b);
 		  
@@ -32,4 +32,13 @@ function calculerOperation(pOperation){
 		  
 		  //document.getElementById("spanRes").innerHTML = res;
           zoneRes.innerHTML = res;
+		  ajouterDansHistorique(a,b,pOperation,res);
+}
+
+function ajouterDansHistorique(a,b,op,res){
+	var calcul="a="+a+" b="+b+ " op="+op+ " res="+res;
+	var ulHisto = document.getElementById('ulHistorique');
+	var nouvel_li = document.createElement('li');
+	nouvel_li.innerHTML=calcul;//ajoute texte entre <li> et </li>
+	ulHisto.appendChild(nouvel_li);//ajoute <li> dans <ul>
 }
