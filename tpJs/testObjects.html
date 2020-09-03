@@ -30,6 +30,12 @@
 	  devise3.aff();
 	  console.log(devise3["change"]);
 	  
+	   var tabDevises = [];
+	   tabDevises.push(devise2);
+	   tabDevises.push(devise3);
+	   tabDevises.push(new Devise());
+	   console.log(JSON.stringify(tabDevises));
+	  
 	  
 	  //var devise4 = new Devise("GBP","Livre" , 0.9);
 	  
@@ -41,7 +47,31 @@
 		    console.log( "***" + JSON.stringify(this));
 		 };
 	  devise4.aff();
- 
+	  
+	  var tabSaisons = //new Array("hiver","printemps","ete","automne");
+	                   [ "hiver" , "printemps","ete","automne" ];
+      for(i=0;i<tabSaisons.length;i++){
+	     console.log(tabSaisons[i]);
+	  }
+	  for(indice in tabSaisons){
+	     console.log(indice +  " " + tabSaisons[indice]);
+	  }
+	  //tabSaisons[4]="nouvelle saison";
+	  tabSaisons.push("nouvelle saison");
+	  console.log(JSON.stringify(tabSaisons));
+	  tabSaisons.splice(2, 1) ;//supprimer tabSaisons[2]
+      console.log(JSON.stringify(tabSaisons));
+	  
+	  var tab3 = [];
+	  tab3.push("abc"); tab3.push("def");
+	  tab3["couleur"]="rouge";
+	  console.log(JSON.stringify(tab3));
+	  for(indice in tab3){
+	     console.log(indice +  " " + tab3[indice]);
+	  }
+	  
+	 
+	  
    </script>
    <p>regarder les logs dans la console du navigateur</p>
    <!--
