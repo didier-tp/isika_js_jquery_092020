@@ -17,13 +17,30 @@
 	  }
    
 	  var devise2 = new Devise();
+	  devise2.nom="euro";
+	  var d2json = JSON.stringify(devise2);
+	  console.log(d2json);
 	  devise2.aff();
 	  
 	  var devise3 = new Devise("USD","Dollar" , 1.1);
 	  devise3.change=1.01;
 	  devise3.aff();
+	  devise3.age=100;
+	  devise3.couleur="vert";
+	  devise3.aff();
+	  console.log(devise3["change"]);
+	  
 	  
 	  //var devise4 = new Devise("GBP","Livre" , 0.9);
+	  
+	  //syntaxe "javascript object litteral"
+	  var devise4 = { code : "GBP" , nom : "Livre" , change : 0.9 };
+	  console.log(JSON.stringify(devise4));
+	  console.log(devise4.nom);
+	  devise4.aff = function() {
+		    console.log( "***" + JSON.stringify(this));
+		 };
+	  devise4.aff();
  
    </script>
    <p>regarder les logs dans la console du navigateur</p>
