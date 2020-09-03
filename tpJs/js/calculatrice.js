@@ -1,9 +1,26 @@
+function f1(){
+	console.log("f1");
+}
+
+var f2 = function(){
+	console.log("f2");
+}
+
 window.onload = function(){
+	f1();
+	f2();
 	//console.log("load");
 	var cbHisto = document.getElementById("cbHisto");
 	cbHisto.addEventListener("click",montrerOuCacherHistorique);
 	//équivalent de <input type="checkbox" id="cbHisto" 
           //onclick="montrerOuCacherHistorique()" />
+	/*	  
+    cbHisto.addEventListener("click",function(){
+		var ulHisto = document.getElementById("ulHistorique");
+		var coche = document.getElementById("cbHisto").checked;
+        ulHisto.style.display=coche?"block":"none";
+	});
+   	*/
 }
 
 
