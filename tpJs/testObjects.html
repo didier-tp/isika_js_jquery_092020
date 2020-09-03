@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>testObjects</title>
+	<link rel="stylesheet" href="./css/styles.css" type="text/css" >
+</head>
+<body id="main" >
+   
+   <h1>test Objects</h1>
+   <script>
+      function Devise(code,nom,change){
+	     this.code=code;
+		 this.nom=nom;
+		 this.change = change;
+		 this.aff = function() {
+		    console.log(JSON.stringify(this));
+		 }
+	  }
+   
+	  var devise2 = new Devise();
+	  devise2.aff();
+	  
+	  var devise3 = new Devise("USD","Dollar" , 1.1);
+	  devise3.change=1.01;
+	  devise3.aff();
+	  
+	  //var devise4 = new Devise("GBP","Livre" , 0.9);
+ 
+   </script>
+   <p>regarder les logs dans la console du navigateur</p>
+   <!--
+   <hr/>
+   code:<input type="text" id="code" /> <br/>
+   nom:<input type="text" id="nom" /> <br/>
+   change:<input type="text" id="change" /> <br/>
+   <input type="button" value="ajouter" id="btnAdd" /> <br/>
+   
+   <table border="1" id="tableau">
+     <thead>
+       <tr> <th>Code</th><th>nom</th><th>change</th></tr>
+	 </thead>
+	 <tbody id="tab_body">
+        <tr> <td>USD</td><td>Dollar</td><td>1.1</td></tr>
+	 </tbody>
+   </table>
+   -->
+   
+</body>
+</html>
