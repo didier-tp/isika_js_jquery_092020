@@ -11,7 +11,7 @@ window.onload = function(){
 	f2();
 	//console.log("load");
 	var cbHisto = document.getElementById("cbHisto");
-	cbHisto.addEventListener("click",montrerOuCacherHistorique);
+	cbHisto.addEventListener("change",montrerOuCacherHistorique);
 	//équivalent de <input type="checkbox" id="cbHisto" 
           //onclick="montrerOuCacherHistorique()" />
 	/*	  
