@@ -1,3 +1,11 @@
+window.onload = function(){
+	//console.log("load");
+	var cbHisto = document.getElementById("cbHisto");
+	cbHisto.addEventListener("click",montrerOuCacherHistorique);
+	//équivalent de <input type="checkbox" id="cbHisto" 
+          //onclick="montrerOuCacherHistorique()" />
+}
+
 
 var zoneRes;
 
