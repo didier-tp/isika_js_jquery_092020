@@ -7,9 +7,24 @@
 	$(function(){
 	
 	  $('#idBtn').on("click",function(){
-	      $('#idRue').html("12 rue Elle");
-		  $('#idCodePostal').html("75001");
-		  $('#idVille').html("Par ici");
+	  
+	      $.ajax({
+			type: "GET",
+			url: "./data_personne.json",
+			contentType : "application/json",
+			success: function (data,status,xhr) {
+				if (data) {
+				    console.log("data=" + JSON.stringify(data));
+					var persJs = data;
+					$('#idRue').html(persJs.adresse.rue);
+					$('#idCodePostal').html(persJs.adresse.codePostal);
+					$('#idVille').html(persJs.adresse.ville);
+					}
+				},
+			error: function( jqXHR, textStatus, errorThrown ){
+				console.log("error" + textStatus);
+			}
+		});//end $.ajax
 	  });
 	
 	});
