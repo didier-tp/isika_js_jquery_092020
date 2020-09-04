@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>calculatrice</title>
+	<meta charset="UTF-8">
+	<script src="./lib/jquery-3.5.1.js" ></script>
+	<script>
+	$(function(){
+	
+	  $('#idBtn').on("click",function(){
+	      $('#idRue').html("12 rue Elle");
+		  $('#idCodePostal').html("75001");
+		  $('#idVille').html("Par ici");
+	  });
+	
+	});
+	</script>
+	<link rel="stylesheet" href="./css/styles.css" type="text/css" > 
+</head>
+<body>
+   
+   <h1>page1 avec ajax</h1>
+   
+    prenom: <input id="idPrenom" type="text" value="jean" /> <br/>
+    nom: <input  id="idNom" type="text" value="Bon" /> <br/>
+    <input id="idBtn" value="recuperer adresse" type="button" />
+	<hr/>
+	Cette personne habite à l'adresse suivante: <br/>
+    <span id="idRue"></span> <br/>
+    <span id="idCodePostal"></span> <span id="idVille"></span>   
+  
+</body>
+</html>
