@@ -10,13 +10,17 @@ $(function(){
 				if (data) {
 				    console.log("data=" + JSON.stringify(data));
 					var tabProduits = data;
-					var nouvelleLigne="<tr><td>"+tabProduits[0].code
-					            +"</td><td>"+tabProduits[0].nom
-								+"</td><td>"+tabProduits[0].prix
-								+"</td></tr>";
-					console.log("nouvelleLigne=" + nouvelleLigne);
-					//$('#tableHtmlProd').append(nouvelleLigne);
-					$('#tBodyProd').append(nouvelleLigne);
+					$("#tBodyProd").empty();
+					for(i in tabProduits){
+						var nouvelleLigne="<tr><td>"+tabProduits[i].code
+									+"</td><td>"+tabProduits[i].nom
+									+"</td><td>"+tabProduits[i].prix
+									+"</td><td>"+tabProduits[i].categorie
+									+"</td></tr>";
+						console.log("nouvelleLigne=" + nouvelleLigne);
+						//$('#tableHtmlProd').append(nouvelleLigne);
+						$('#tBodyProd').append(nouvelleLigne);
+					}
 					}
 				},
 			error: function( jqXHR, textStatus, errorThrown ){
